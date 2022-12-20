@@ -5,6 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none !important;
 }
 
 html {
@@ -20,9 +21,104 @@ html {
   --fw-3: 500;
   --fw-4: 600;
   --fw-5: 700;
+  --bg-color: #fffffe;
+  --headline-color: #272343;
+  --nav-bg-color: #272343;
+  --nav-text-color: #fffffe;
+  --paragraph-color: #2d334a;
+  --button-bg-color: #ffd803;
+  --nav-link-active-color: #ffd803;
+  --button-text-color: #272343;
+  --secondary: #e3f6f5;
+  --tertiary: #bae8e8;
 }
 
 body {
   position: relative;
   font-family: var(--main-font);
+  background-color: var(--bg-color);
 }
+
+/* Navbar */
+
+.navbar,
+.navbar-expand-lg {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.bg-custom {
+  background-color: var(--nav-bg-color) !important;
+}
+
+.navbar-brand {
+  color: var(--nav-text-color);
+  font-weight: var(--fw-4);
+  font-size: 1.2rem;
+}
+
+.navbar-brand:hover {
+  color: var(--nav-text-color);
+}
+
+.nav-item {
+  position: relative;
+  margin-right: 2rem;
+}
+
+.nav-link {
+  color: var(--nav-text-color);
+}
+
+.nav-link:hover {
+  transition: all 0.5s;
+  color: var(--nav-link-active-color);
+}
+
+.navs-active {
+  font-weight: var(--fw-4);
+  color: var(--nav-link-active-color);
+}
+
+.navs-active:hover {
+  color: var(--nav-link-active-color);
+}
+
+.btn-link {
+  padding: 0.5rem 2rem;
+  border-color: var(--button-bg-color);
+  font-weight: var(--fw-4);
+  color: var(--nav-text-color);
+}
+
+.btn-link:active,
+.btn-link:focus {
+  color: var(--nav-text-color) !important;
+  background-color: var(--button-bg-color) !important;
+}
+
+.btn-link:hover {
+  transition: 0.6s;
+  color: var(--nav-text-color);
+  background-color: var(--button-bg-color);
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-expand-lg {
+    padding-bottom: 1rem;
+  }
+  .nav-item {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn-link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* Navbar End */
