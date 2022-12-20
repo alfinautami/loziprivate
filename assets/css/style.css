@@ -169,17 +169,25 @@ body {
   background-color: transparent;
 }
 
+.btn-primary:active,
+.btn-primary:focus {
+  border-color: var(--button-bg-color) !important;
+  color: var(--nav-text-color) !important;
+  background-color: transparent !important;
+}
+
 @media only screen and (max-width: 600px) {
   .hero-image {
     width: 100%;
     height: 25rem;
   }
   .hero-text {
-    padding: 8rem 2rem;
+    margin: 6rem 1rem;
     display: flex;
     flex-direction: column;
   }
   .hero-text h1 {
+    width: 20rem;
     color: var(--bg-color);
     font-weight: var(--fw-4);
     font-size: 2.4rem;
@@ -187,6 +195,14 @@ body {
   .hero-text h4 {
     color: var(--bg-color);
     font-size: 1.2rem;
+  }
+  .btn-primary {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    font-weight: var(--fw-5);
+    border: 0.2rem solid var(--button-bg-color);
+    margin-top: 1rem;
+    padding: 0.6rem 3rem;
   }
 }
 
