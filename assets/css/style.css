@@ -43,9 +43,9 @@ body {
 
 .navbar,
 .navbar-expand-lg {
-  position: relative;
   width: 100%;
   height: auto;
+  transition: all 0.5s ease-in-out;
 }
 
 .bg-custom {
@@ -161,7 +161,7 @@ body {
   font-weight: var(--fw-5);
   border: 0.2rem solid var(--button-bg-color);
   margin-top: 1rem;
-  padding: 0.8rem 4rem;
+  padding: 0.4rem 3rem;
 }
 
 .btn-primary:hover {
@@ -189,7 +189,7 @@ body {
   .hero-text h1 {
     width: 20rem;
     color: var(--bg-color);
-    font-weight: var(--fw-4);
+    font-weight: var(--fw-5);
     font-size: 2.4rem;
   }
   .hero-text h4 {
@@ -207,3 +207,19 @@ body {
 }
 
 /* Hero Section End */
+
+/* Why Us Section */
+
+#whyUsSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 3rem 0;
+}
+
+#whyUsSection h1 {
+  font-weight: var(--fw-5);
+  text-align: center;
+}
+
+/* Why Us Section End */
