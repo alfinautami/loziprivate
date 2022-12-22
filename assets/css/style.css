@@ -150,7 +150,7 @@ body {
   font-size: 4rem;
 }
 
-.hero-text h4 {
+.hero-text p {
   color: var(--bg-color);
   font-size: 1.5rem;
 }
