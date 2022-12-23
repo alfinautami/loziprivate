@@ -22,15 +22,15 @@ html {
   --fw-4: 600;
   --fw-5: 700;
   --bg-color: #fffffe;
-  --headline-color: #272343;
-  --nav-bg-color: #272343;
   --nav-text-color: #fffffe;
-  --paragraph-color: #2d334a;
-  --button-bg-color: #ffd803;
-  --nav-link-active-color: #ffd803;
-  --button-text-color: #272343;
-  --secondary: #e3f6f5;
-  --tertiary: #bae8e8;
+  --button-text-color: #fffffe;
+  --headline-color: #2b2c34;
+  --nav-bg-color: #2b2c34;
+  --paragraph-color: #2b2c34;
+  --button-bg-color: #6246ea;
+  --nav-link-active-color: #6246ea;
+  --secondary: #d1d1e9;
+  --tertiary: #e45858;
 }
 
 body {
@@ -147,7 +147,7 @@ body {
   width: 40rem;
   color: var(--bg-color);
   font-weight: var(--fw-4);
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .hero-text p {
@@ -218,8 +218,40 @@ body {
 }
 
 #whyUsSection h1 {
+  font-size: 2.5rem;
   font-weight: var(--fw-5);
   text-align: center;
+}
+
+.why-us-card {
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  text-align: center;
+}
+
+.circle-container {
+  display: block;
+  margin-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+  padding: 1.5rem 1.5rem;
+  border-radius: 100%;
+  background-color: #6146ea55;
+}
+
+.circle {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-icon {
+  font-size: 1.5rem;
+  color: var(--button-bg-color);
 }
 
 /* Why Us Section End */
