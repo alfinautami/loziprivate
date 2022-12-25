@@ -330,3 +330,75 @@ ion-icon {
 }
 
 /* Why Us Section End */
+
+/* Testimonial Section */
+
+#testimonialSection {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#testimonialSection h1 {
+  font-size: 2.5rem;
+  font-weight: var(--fw-5);
+  text-align: center;
+  padding: 2rem 0 2rem 0;
+  color: var(--headline-color);
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  background-image: url("");
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  top: -2rem;
+  width: 0.7rem;
+  height: 0.7rem;
+  background-color: var(--button-bg-color);
+}
+
+.btn-success {
+  position: relative;
+  top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Testimonial Section End */
