@@ -180,10 +180,10 @@ body {
 @media only screen and (max-width: 600px) {
   .hero-image {
     width: 100%;
-    height: 25rem;
+    height: 30rem;
   }
   .hero-text {
-    margin: 6rem 1rem;
+    margin: 8rem 2rem;
     display: flex;
     flex-direction: column;
   }
@@ -216,7 +216,7 @@ body {
   width: 100%;
   height: auto;
   margin: 3rem 0;
-  padding: 4rem 0;
+  padding: 4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,6 +254,20 @@ body {
   border-color: var(--button-bg-color) !important;
   color: var(--headline-color) !important;
   background-color: transparent !important;
+}
+
+@media only screen and (max-width: 600px) {
+  #aboutUs h1 {
+    font-size: 2.5rem;
+    font-weight: var(--fw-5);
+  }
+
+  #aboutUs p {
+    margin: 3rem 0 0 0;
+    font-size: 1.3rem;
+    font-weight: var(--fw-3);
+    text-align: justify;
+  }
 }
 
 /* About Us End */
