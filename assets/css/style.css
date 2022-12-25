@@ -129,11 +129,12 @@ body {
   flex-direction: column;
   width: 100%;
   height: 35.41rem;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.527)),
+  background-image: linear-gradient(rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0.737)),
     url("../img/hero-img-min.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero-text {
@@ -208,12 +209,65 @@ body {
 
 /* Hero Section End */
 
+/* About Us */
+
+#aboutUs {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin: 3rem 0;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#aboutUs h1 {
+  font-size: 2.5rem;
+  font-weight: var(--fw-5);
+}
+
+#aboutUs p {
+  font-size: 1.3rem;
+  font-weight: var(--fw-3);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--headline-color);
+  font-weight: var(--fw-5);
+  border: 0.2rem solid var(--button-bg-color);
+  margin-top: 1rem;
+  padding: 0.4rem 3rem;
+}
+
+.btn-secondary:hover {
+  transition: 0.6s ease-in-out;
+  border-color: var(--button-bg-color);
+  background-color: var(--button-bg-color);
+}
+
+.btn-secondary:active,
+.btn-secondary:focus {
+  border-color: var(--button-bg-color) !important;
+  color: var(--headline-color) !important;
+  background-color: transparent !important;
+}
+
+/* About Us End */
+
 /* Why Us Section */
 
 #whyUsSection {
   position: relative;
   width: 100%;
   height: auto;
+  background-image: linear-gradient(#2b2c34, #2b2c34),
+    url("../img/why-us-img.jpg");
+  background-size: cover;
+  background-position: center;
   margin: 3rem 0;
 }
 
@@ -221,12 +275,19 @@ body {
   font-size: 2.5rem;
   font-weight: var(--fw-5);
   text-align: center;
+  padding: 3rem 0 0 0;
+  color: var(--nav-text-color);
 }
 
 .why-us-card {
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   text-align: center;
+}
+
+.why-us-card:hover {
+  transition: 0.6s;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .circle-container {
