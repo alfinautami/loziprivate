@@ -85,6 +85,48 @@ body {
   color: var(--nav-link-active-color);
 }
 
+.menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+.line {
+  fill: none;
+  stroke: var(--nav-link-active-color);
+  stroke-width: 6;
+  transition: stroke-dasharray 800ms cubic-bezier(0.4, 0, 0.2, 1),
+    stroke-dashoffset 800ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 6;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 6;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
 .btn-link {
   padding: 0.5rem 2rem;
   font-weight: var(--fw-4);
@@ -120,7 +162,47 @@ body {
     padding: 0.5rem 8rem;
   }
 }
+
 /* Navbar End */
+
+/* WA Button */
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+  animation: floating 2s infinite ease-in-out;
+}
+
+.my-float {
+  color: var(--bg-color);
+  margin-top: 18px;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* WA Button End */
 
 /* Hero Section */
 
@@ -130,7 +212,7 @@ body {
   width: 100%;
   height: 35.41rem;
   background-image: linear-gradient(rgba(0, 0, 0, 0.737), rgba(0, 0, 0, 0.737)),
-    url("../img/hero-img-min.jpg");
+    url("../img/sampul.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -294,14 +376,17 @@ body {
 }
 
 .why-us-card {
+  width: auto;
+  height: 14rem;
   border: none;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px;
   text-align: center;
 }
 
 .why-us-card:hover {
   transition: 0.6s;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  box-shadow: rgba(255, 255, 255, 0.101) 0px 3px 6px,
+    rgba(255, 255, 255, 0.095) 0px 3px 6px;
 }
 
 .circle-container {
@@ -351,6 +436,27 @@ ion-icon {
   color: var(--headline-color);
 }
 
+.testi-card {
+  border: none;
+  width: auto;
+  height: 17rem;
+  text-align: justify;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.testi-card:hover {
+  transition: 0.6s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.testi-card .card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -376,20 +482,9 @@ ion-icon {
   align-items: center;
 }
 
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.swiper-button-next {
-  background-image: url("");
-}
-
 .swiper-pagination-bullet {
   position: relative;
-  top: -2rem;
+  top: -5.8rem;
   width: 0.7rem;
   height: 0.7rem;
   background-color: var(--button-bg-color);
@@ -397,8 +492,143 @@ ion-icon {
 
 .btn-success {
   position: relative;
-  top: 2rem;
-  margin-bottom: 2rem;
+  padding: 0.5rem 2rem;
+  top: 3rem;
+  margin-bottom: 6rem;
+  background-color: var(--button-bg-color);
+  border: none;
+}
+
+.btn-success:hover {
+  transition: 0.6s ease-in-out;
+  background-color: #3e28ac;
+}
+
+.btn-success:active,
+.btn-success:focus {
+  color: var(--nav-text-color) !important;
+  background-color: var(--button-bg-color) !important;
+}
+
+@media only screen and (max-width: 600px) {
+  .testi-card {
+    border: none;
+    width: auto;
+    height: 21rem;
+    text-align: justify;
+  }
+  .testi-card .card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  .testi-card .card-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Testimonial Section End */
+
+/* Footer */
+
+#myFooter {
+  width: 100%;
+  height: auto;
+  background-color: var(--nav-bg-color);
+  margin: 0 0 -2rem 0;
+}
+
+.footer-link {
+  font-family: var(--main-font);
+  font-weight: var(--fw-2);
+  color: var(--bg-color) !important;
+}
+
+.footer-copyright {
+  color: var(--button-text-color);
+}
+
+@media only screen and (max-width: 600px) {
+  #myFooter {
+    margin: -2rem 0;
+  }
+  #myFooter .nav-link {
+    font-size: 1rem;
+  }
+}
+
+/* Footer End */
+
+/* --------------------------- */
+
+/* Login Page */
+
+#myLogin {
+  width: 100%;
+  height: auto;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+#myLogin h1 {
+  font-size: 3rem;
+  font-weight: var(--fw-5);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.myForm {
+  margin: 1.5rem 0;
+}
+
+.login-illustration {
+  position: absolute;
+  top: 45%;
+  transform: translate(0, -45%);
+  max-width: 30rem;
+  height: auto;
+}
+
+.btn-info {
+  width: 100%;
+  padding: 0.4rem 5rem;
+  background-color: #289733;
+  border-color: #289733;
+  font-weight: var(--fw-4);
+  color: var(--button-text-color);
+}
+
+.btn-info:hover {
+  transition: 0.6s ease-in-out;
+  background-color: #1a6a22;
+  border-color: #1a6a22;
+}
+
+.show-repeat-pass {
+  cursor: pointer;
+  color: #1d63cb;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 600px) {
+  .login-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+  }
+  .login-illustration {
+    display: none;
+  }
+  #myLogin input {
+    width: 100% !important;
+  }
+}
+
+/* Login Page End */
